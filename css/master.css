@@ -1,0 +1,25 @@
+@import "./materialize.min.css";
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+li.tab {
+  width: 20%;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.asterisk {
+  height: 1rem;
+}

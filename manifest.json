@@ -1,0 +1,22 @@
+{
+  "name": "Kullaberg Directory",
+  "short_name": "Kullaberg Directory",
+  "start_url": "./",
+  "icons": [
+    {
+      "src":
+        "https://xtreemze.github.io/kullabergdirectory/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src":
+        "https://xtreemze.github.io/kullabergdirectory/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#ffc40d",
+  "background_color": "#ffc40d",
+  "display": "fullscreen"
+}
