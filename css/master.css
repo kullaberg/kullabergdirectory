@@ -23,3 +23,7 @@ li.tab {
 .asterisk {
   height: 1rem;
 }
+
+#listings li {
+  opacity: 0;
+}
