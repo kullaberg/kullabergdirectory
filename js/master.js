@@ -4,16 +4,20 @@ window.Guide = new Set();
 window.Dining = new Set();
 window.Cafe = new Set();
 window.Hotel = new Set();
-window.Grocery = new Set();
+window.Shop = new Set();
 class Business {
   /**
    * Creates an instance of Business.
-   * @param {string} name 
-   * @param {string} email 
-   * @param {string} phone 
-   * @param {string} address 
-   * @param {string} description 
-   * @param {string} location 
+   * @param {Object} {
+   *     name,
+   *     email,
+   *     phone,
+   *     website,
+   *     address,
+   *     description,
+   *     location,
+   *     category
+   *   } 
    * @memberof Business
    */
   constructor({
@@ -48,8 +52,8 @@ class Business {
       case "Hotel":
         Hotel.add(this);
         break;
-      case "Grocery":
-        Grocery.add(this);
+      case "Shop":
+        Shop.add(this);
         break;
 
       default:
@@ -65,44 +69,42 @@ class Business {
   <div class="card-stacked">
     <div class="card-content grey-text text-lighten-4">
       <h5 class="card-name blue-text text-lighten-4">${this.name}</h5>
-        <h6>${this.address}</h6>
         <p>${this.description}</p>
     </div>
     <div class="card-action">
-    <a href="${this
+    <a href="tel:${this
       .phone}" class="blue-text text-lighten-3"><i class="material-icons">phone</i></a>
-    <a href="${this
+    <a href="mailto:${this
       .email}" class="blue-text text-lighten-3"><i class="material-icons">email</i></a>
-    <a href="${this
+    <a target="_blank" href="${this
       .locationLink}" class="blue-text text-lighten-3"><i class="material-icons">place</i></a>
-    <a href="${this
+    <a target="_blank" href="${this
       .website}" class="blue-text text-lighten-3"><i class="material-icons">open_in_browser</i></a>
     </div>
   </div>
 </div>
 </article></li>
-<li>
-<article class="card blue hide-on-med-and-up">
-  <div class="card blue darken-3">
+<li class="hide-on-med-and-up"><div class="col s12">
+
+  <article class="card blue">
+    <div class="card blue darken-3">
     <div class="card-content grey-text text-lighten-4">
-      <span class="card-name blue-text text-lighten-4">${this.name}</span>
-        <div class="row">
-        <div class="col s4">Email:</div><div class="col s8">${this.email}</div>
-        <div class="col s4">Phone:</div><div class="col s8">${this.phone}</div>
-        <div class="col s4"> Address:</div><div class="col s8">${this
-          .address}</div>
-      </div>
-      <p>
-      ${this.description}
-      </p>
-    </div>
-    <div class="card-action">
-      <a href="${this
-        .locationLink} class="blue-text text-lighten-3">Location</a>
-      <a href="${this.website}" class="blue-text text-lighten-3">Website</a>
-    </div>
+    <h5 class="card-name blue-text text-lighten-4">${this.name}</h5>
+      <p>${this.description}</p>
   </div>
-</article></li>`;
+      <div class="card-action">
+      <a href="${this
+        .phone}" class="blue-text text-lighten-3"><i class="material-icons">phone</i></a>
+      <a href="${this
+        .email}" class="blue-text text-lighten-3"><i class="material-icons">email</i></a>
+      <a target="_blank" href="${this
+        .locationLink}" class="blue-text text-lighten-3"><i class="material-icons">place</i></a>
+      <a href="${this
+        .website}" class="blue-text text-lighten-3"><i class="material-icons">open_in_browser</i></a>
+      </div>
+    </div>
+  </article>
+</div></li>`;
   }
 }
 
@@ -111,7 +113,7 @@ new Business({
   email: "cafe@test.com",
   website: "URL goes here",
   address: "Hoganas, SV",
-  category: "Grocery",
+  category: "Shop",
   description: "We sell coffee and tea",
   location: "coordintaes here"
 });
@@ -196,14 +198,16 @@ new Business({
   location: "coordintaes here"
 });
 new Business({
-  name: "Cafe1",
+  name: "Kullagårdens Wärdshus",
   email: "cafe@test.com",
-  phone: "223-2144",
-  website: "URL goes here",
-  address: "Hoganas, SV",
-  category: "Dining",
-  description: "We sell coffee and tea",
-  location: "coordintaes here"
+  phone: "042-34 74 20",
+  website: "http://kullagardenswardshus.se",
+  address: "Italienska vägen 211, 263 77 Mölle",
+  category: "Hotel",
+  description:
+    "Simple accommodations, plus a sauna & a colorful restaurant with golf-course views.",
+  location:
+    "https://www.google.se/maps/place/Kullag%C3%A5rdens+W%C3%A4rdshus/@56.298972,12.4633313,15z/data=!4m13!1m7!3m6!1s0x0:0x0!2zNTbCsDE3JzQ5LjYiTiAxMsKwMjcnNDUuMiJF!3b1!8m2!3d56.297111!4d12.462556!3m4!1s0x0:0x8bbe181d2fbc1710!8m2!3d56.298972!4d12.4693456"
 });
 
 window.addEventListener("load", function() {
@@ -214,12 +218,38 @@ window.addEventListener("load", function() {
 });
 
 window.sort = function(category) {
-  $("#listings").fadeOut(300);
-  $("#listings").fadeIn(0);
-  listings.innerHTML = "";
-  window[category].forEach(function(element) {
-    console.log(category);
-    listings.innerHTML += element.card;
-  }, this);
-  Materialize.showStaggeredList("#listings");
+  $("#listings")
+    .fadeOut(100)
+    .fadeIn(0, function(element) {
+      listings.innerHTML = "";
+      window[category].forEach(function(element) {
+        listings.innerHTML += element.card;
+      }, this);
+      Materialize.showStaggeredList("#listings");
+    });
 };
+
+const imported = {
+  export: [
+    {
+      name: "Kullagårdens Wärdshus",
+      email: "info@kullagardenswardshus.se",
+      phone: "+4642347420",
+      website: "http://kullagardenswardshus.se",
+      description:
+        "Simple accommodations, plus a sauna & a colorful restaurant with golf-course views.",
+      location:
+        "https://www.google.se/maps/place/Kullag%C3%A5rdens+W%C3%A4rdshus/@56.298972,12.4633313,15z/data=!4m13!1m7!3m6!1s0x0:0x0!2zNTbCsDE3JzQ5LjYiTiAxMsKwMjcnNDUuMiJF!3b1!8m2!3d56.297111!4d12.462556!3m4!1s0x0:0x8bbe181d2fbc1710!8m2!3d56.298972!4d12.4693456",
+      category: "Hotel"
+    }
+  ]
+};
+
+newFunction();
+
+function newFunction() {
+  imported.export.forEach(function(item) {
+    console.log(item);
+    new Business(item);
+  });
+}

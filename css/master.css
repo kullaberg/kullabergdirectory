@@ -20,8 +20,14 @@ li.tab {
   text-transform: uppercase;
 }
 
+nav .brand-logo {
+  line-height: 1.25rem;
+  width: 5.2em;
+}
+
 .asterisk {
-  height: 1rem;
+  height: 3rem;
+  float: left;
 }
 
 #listings li {
