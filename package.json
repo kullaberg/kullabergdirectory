@@ -24,7 +24,7 @@
     "type": "git",
     "url": "git+https://github.com/xtreemze/kullabergdirectory.git"
   },
-  "keywords": ["cine", "progressive", "webapp", "materialize", "JavaScript"],
+  "keywords": ["progressive", "webapp", "materialize", "JavaScript"],
   "author": "Carlos Velasco",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {

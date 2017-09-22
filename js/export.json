@@ -1,0 +1,24 @@
+{
+  "export": [
+    {
+      "Name": "Kullagårdens Wärdshus",
+      "Email": "info@kullagardenswardshus.se",
+      "Phone": "+4642347420",
+      "Website": "http://kullagardenswardshus.se",
+      "Description":
+        "Simple accommodations, plus a sauna & a colorful restaurant with golf-course views.",
+      "MapURL":
+        "https://www.google.se/maps/place/Kullag%C3%A5rdens+W%C3%A4rdshus/@56.298972,12.4633313,15z/data=!4m13!1m7!3m6!1s0x0:0x0!2zNTbCsDE3JzQ5LjYiTiAxMsKwMjcnNDUuMiJF!3b1!8m2!3d56.297111!4d12.462556!3m4!1s0x0:0x8bbe181d2fbc1710!8m2!3d56.298972!4d12.4693456",
+      "Category": "Hotel"
+    },
+    {
+      "Name": "Test 2",
+      "Email": "cafe@2",
+      "Phone": "",
+      "Website": "",
+      "Description": "None included",
+      "MapURL": "Location",
+      "Category": "Dining"
+    }
+  ]
+}

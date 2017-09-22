@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <body>
-    <header>
+    <header id="top" class="scrollspy">
       <nav class="nav-extended blue lighten-2">
         <div class="nav-wrapper"> <span class="brand-logo white-text"> <img class="asterisk" src="img/asterisk.svg" alt=""><span class="title">Kullaberg Directory</span></span>
         </div>
@@ -63,11 +63,11 @@
         <i class="large material-icons">search</i>
       </a>
       <ul>
-        <li class="waves-effect waves-light"><a onclick="sort('Guide');"><i class="material-icons">directions_walk</i></a></li>
-        <li class="waves-effect waves-light"><a onclick="sort('Dining');"><i class="material-icons">local_dining</i></a></li>
-        <li class="waves-effect waves-light"><a onclick="sort('Cafe');"><i class="material-icons">local_cafe</i></a></li>
-        <li class="waves-effect waves-light"><a onclick="sort('Hotel');"><i class="material-icons">local_hotel</i></a></li>
-        <li class="waves-effect waves-light"><a onclick="sort('Shop');"><i class="material-icons">local_grocery_store</i></a></li>
+        <li class="waves-effect waves-light"><a href="#top" onclick="sort('Guide');"><i class="material-icons">directions_walk</i></a></li>
+        <li class="waves-effect waves-light"><a href="#top" onclick="sort('Dining');"><i class="material-icons">local_dining</i></a></li>
+        <li class="waves-effect waves-light"><a href="#top" onclick="sort('Cafe');"><i class="material-icons">local_cafe</i></a></li>
+        <li class="waves-effect waves-light"><a href="#top" onclick="sort('Hotel');"><i class="material-icons">local_hotel</i></a></li>
+        <li class="waves-effect waves-light"><a href="#top" onclick="sort('Shop');"><i class="material-icons">local_grocery_store</i></a></li>
       </ul>
     </div>
     <script src="js/jquery-3.2.1.min.js"></script>
