@@ -23,6 +23,7 @@ li.tab {
 nav .brand-logo {
   line-height: 1.25rem;
   width: 5.2em;
+  margin-top: 0.5em;
 }
 
 .asterisk {
@@ -32,4 +33,12 @@ nav .brand-logo {
 
 #listings li {
   opacity: 0;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.card-title {
+  text-shadow: rgba(0, 0, 0, 0.76) 0px 2px 2px;
 }

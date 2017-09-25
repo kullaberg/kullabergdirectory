@@ -2,43 +2,65 @@ const listings = document.getElementById("listings");
 window.All = new Set();
 window.Guide = new Set();
 window.Dining = new Set();
-window.Cafe = new Set();
-window.Hotel = new Set();
+window.Activities = new Set();
+window.Stay = new Set();
 window.Shop = new Set();
 class Business {
   /**
    * Creates an instance of Business.
    * @param {Object} {
    *     Name,
+   *     Category,
+   *     DescriptionEn,
+   *     DescriptionSv,
+   *     StorefrontPhoto,
+   *     MapURL,
+   *     Komun,
    *     Email,
    *     Phone,
-   *     Website,
-   *     Description,
-   *     MapURL,
-   *     Category
+   *     Website
    *   } 
    * @memberof Business
    */
-  constructor({ Name, Email, Phone, Website, Description, MapURL, Category }) {
+  constructor({
+    Name,
+    Category,
+    DescriptionEn,
+    DescriptionSv,
+    StorefrontPhoto,
+    MapURL,
+    Komun,
+    Email,
+    Phone,
+    Website
+  }) {
     this.name = Name || "Not Available";
+    this.category = Category || "Not Available";
+    this.descriptionEn = DescriptionEn || "Not Available";
+    this.descriptionSv = DescriptionSv || "Not Available";
+    this.photo = StorefrontPhoto || "Not Available";
+    let StorefrontPhotoCut = StorefrontPhoto.replace(
+      "https://drive.google.com/open?id=",
+      ""
+    );
+    this.photoCut = StorefrontPhotoCut;
+    this.location = MapURL || "Not Available";
+    this.komun = Komun || "Not Available";
     this.email = Email || "Not Available";
     this.phone = Phone || "Not Available";
     this.website = Website || "Not Available";
-    this.description = Description || "Not Available";
-    this.location = MapURL || "Not Available";
-    this.category = Category || "Not Available";
     switch (Category) {
       case "Dining":
         Dining.add(this);
         break;
-      case "Cafe":
-        Cafe.add(this);
+      case "Activities":
+        Activities.add(this);
         break;
       case "Guide":
         Guide.add(this);
         break;
-      case "Hotel":
-        Hotel.add(this);
+      case "Stay":
+        Stay.add(this);
         break;
       case "Shop":
         Shop.add(this);
@@ -53,20 +75,29 @@ class Business {
 
   get card() {
     return `<li class="col s12 m6 l4">
-    <div class="card hoverable blue darken-3">
+    <div class="card medium hoverable blue darken-3">
+    <div class="card-image">
+      <img class="materialboxed" data-caption="${this.name}: ${this
+      .descriptionEn}" src="https://drive.google.com/uc?export=download&id=${this
+      .photoCut}">
+    <span class="card-title">${this.name}</span>
+  </div>
     <div class="card-content grey-text text-lighten-4">
-    <span class="card-title blue-text text-lighten-4">${this.name}</span>
-        <p>${this.description}</p>
+        <p>${this.descriptionEn}</p>
     </div>
     <div class="card-action">
-    <a href="tel:${this
-      .phone}" class="blue-text text-lighten-3"><i class="material-icons">phone</i></>
+    <a  href="tel:${this
+      .phone}" class="blue-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Phone: ${this
+      .phone}"><i class="material-icons">phone</i></a>
     <a href="mailto:${this
-      .email}" class="blue-text text-lighten-3"><i class="material-icons">email</i></a>
+      .email}" class="blue-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Email: ${this
+      .email}"><i class="material-icons">email</i></a>
     <a target="_blank" href="${this
-      .locationLink}" class="blue-text text-lighten-3"><i class="material-icons">place</i></a>
+      .location}" class="blue-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Near: ${this
+      .komun}"><i class="material-icons">place</i></a>
     <a target="_blank" href="${this
-      .website}" class="blue-text text-lighten-3"><i class="material-icons">open_in_browser</i></a>
+      .website}" class="blue-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Website: ${this
+      .website}"><i class="material-icons">open_in_browser</i></a>
     </div>
 </div>
 </li>`;
@@ -83,6 +114,8 @@ window.addEventListener("load", function() {
   importJSON();
   sort("All");
   $(".scrollspy").scrollSpy();
+  $(".tooltipped").tooltip();
+  $(".materialboxed").materialbox();
 });
 
 window.sort = function(category) {
@@ -103,6 +136,8 @@ window.sort = function(category) {
         }
       ];
       Materialize.scrollFire(options);
+      $(".tooltipped").tooltip();
+      $(".materialboxed").materialbox();
     });
 };
 const imported = require("./export.json");
