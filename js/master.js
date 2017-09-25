@@ -75,9 +75,9 @@ class Business {
 
   get card() {
     return `<li class="col s12 m6 l4">
-    <div class="card medium hoverable blue darken-3">
+    <div class="card medium blue darken-3">
     <div class="card-image">
-      <img class="materialboxed" data-caption="${this.name}: ${this
+      <img class="" data-caption="${this.name}: ${this
       .descriptionEn}" src="https://drive.google.com/uc?export=download&id=${this
       .photoCut}">
     <span class="card-title">${this.name}</span>
@@ -105,6 +105,7 @@ class Business {
 }
 
 function importJSON() {
+  const imported = require("./export.json");
   imported.export.forEach(function(item) {
     new Business(item);
   });
@@ -140,4 +141,3 @@ window.sort = function(category) {
       $(".materialboxed").materialbox();
     });
 };
-const imported = require("./export.json");

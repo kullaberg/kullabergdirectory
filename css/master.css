@@ -4,6 +4,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 main {
@@ -14,16 +15,15 @@ li.tab {
   width: 20%;
 }
 
-.title {
-  font-size: 1.4rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
 nav .brand-logo {
   line-height: 1.25rem;
   width: 5.2em;
   margin-top: 0.5em;
+}
+.title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .asterisk {
