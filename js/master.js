@@ -1,10 +1,8 @@
 const listings = document.getElementById("listings");
-window.All = new Set();
-window.Guide = new Set();
-window.Dining = new Set();
-window.Activities = new Set();
-window.Stay = new Set();
-window.Shop = new Set();
+const categories = ["All", "Guide", "Dining", "Activities", "Stay", "Shop"];
+categories.forEach(function categorySet(category) {
+  window[category] = new Set();
+});
 class Business {
   /**
    * Creates an instance of Business.
@@ -49,26 +47,7 @@ class Business {
     this.email = Email || "Not Available";
     this.phone = Phone || "Not Available";
     this.website = Website || "Not Available";
-    switch (Category) {
-      case "Dining":
-        Dining.add(this);
-        break;
-      case "Activities":
-        Activities.add(this);
-        break;
-      case "Guide":
-        Guide.add(this);
-        break;
-      case "Stay":
-        Stay.add(this);
-        break;
-      case "Shop":
-        Shop.add(this);
-        break;
-
-      default:
-        break;
-    }
+    window[Category].add(this);
     All.add(this);
     window[name] = this;
   }
@@ -116,7 +95,7 @@ window.addEventListener("load", function() {
   sort("All");
   $(".scrollspy").scrollSpy();
   $(".tooltipped").tooltip();
-  $(".materialboxed").materialbox();
+  // $(".materialboxed").materialbox();
 });
 
 window.sort = function(category) {
@@ -138,6 +117,6 @@ window.sort = function(category) {
       ];
       Materialize.scrollFire(options);
       $(".tooltipped").tooltip();
-      $(".materialboxed").materialbox();
+      // $(".materialboxed").materialbox();
     });
 };
