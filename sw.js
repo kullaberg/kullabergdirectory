@@ -47,11 +47,11 @@ var __wpo = {
     "5a8465896222227807ff29908d8648db510561a5": "./fonts/roboto/Roboto-Bold.woff2",
     "e0655b6097eddf9df88cd194eff08436ea086a1c": "./fonts/roboto/Roboto-Bold.woff",
     "805db6e929e98fd3deb05cdb2935fc5a33183c15": "./img/asterisk.svg",
-    "93521aab89d8d0dea2c41f94c1bad31b4b0e97f1": "./bundle.js"
+    "c92961d8211cb90ebe81366f4ad6b5b1d7e41163": "./bundle.js"
   },
   "strategy": "all",
   "responseStrategy": "network-first",
-  "version": "2017-10-16 12:25:23",
+  "version": "2018-3-1 10:07:02",
   "name": "webpack-offline",
   "pluginVersion": "4.8.4",
   "relativePaths": true
