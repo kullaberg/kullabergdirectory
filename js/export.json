@@ -1,43 +1,53 @@
 {
-  "export": {
-    "Flickorna Lundgren på Skäret": {
+  "export": [
+    {
       "Name": "Flickorna Lundgren på Skäret",
       "Category": "Dining",
       "DescriptionEn": "Cafe, bakery and restaurant",
       "DescriptionSv": "Caffé, bageri och restaurang",
-      "StorefrontPhoto": "https://drive.google.com/open?id=128J6MdtijBTWztVuhnp-ctKpIcYiVujD",
-      "MapURL": "https://www.google.se/maps/place/Sk%C3%A4retv%C3%A4gen+19,+260+41+Nyhamnsl%C3%A4ge/@56.2596856,12.611689,17z/data=!3m1!4b1!4m5!3m4!1s0x465227e61134f509:0xa163cc008bc550b0!8m2!3d56.2596856!4d12.6138777",
+      "StorefrontPhoto":
+        "https://drive.google.com/open?id=128J6MdtijBTWztVuhnp-ctKpIcYiVujD",
+      "MapURL":
+        "https://www.google.se/maps/place/Sk%C3%A4retv%C3%A4gen+19,+260+41+Nyhamnsl%C3%A4ge/@56.2596856,12.611689,17z/data=!3m1!4b1!4m5!3m4!1s0x465227e61134f509:0xa163cc008bc550b0!8m2!3d56.2596856!4d12.6138777",
       "Timestamp": "2018-02-27T10:34:14.885Z",
       "Komun": "Skäret",
       "Email": "mats@flickornalundgren.se",
       "Phone": "042-346070",
       "Website": "http://www.fl-lundgren.se/"
     },
-    "Kullabergsguiderna": {
+    {
       "Name": "Kullabergsguiderna",
       "Category": "Guide",
-      "DescriptionEn": "Guided activities in Kullaberg. Come with us on our porpoise safaris, cave walks and abseiling among others.",
-      "DescriptionSv": "Guidade aktiviteter på Kullaberg. Följ med oss på bland annat Tumlarsafari, Äventyrsvandring och Bergsnedfirning.",
-      "StorefrontPhoto": "https://drive.google.com/open?id=1EOs5hNsqDz0w8HH6Yt9CEvmDr-uMEvlY",
-      "MapURL": "https://www.google.com/maps/place/Naturum+Kullaberg/@56.301305,12.451908,16z/data=!4m5!3m4!1s0x0:0xb5be019b3dd77e4e!8m2!3d56.301305!4d12.4519079?hl=en-US",
+      "DescriptionEn":
+        "Guided activities in Kullaberg. Come with us on our porpoise safaris, cave walks and abseiling among others.",
+      "DescriptionSv":
+        "Guidade aktiviteter på Kullaberg. Följ med oss på bland annat Tumlarsafari, Äventyrsvandring och Bergsnedfirning.",
+      "StorefrontPhoto":
+        "https://drive.google.com/open?id=1EOs5hNsqDz0w8HH6Yt9CEvmDr-uMEvlY",
+      "MapURL":
+        "https://www.google.com/maps/place/Naturum+Kullaberg/@56.301305,12.451908,16z/data=!4m5!3m4!1s0x0:0xb5be019b3dd77e4e!8m2!3d56.301305!4d12.4519079?hl=en-US",
       "Timestamp": "2018-02-28T14:42:27.369Z",
       "Komun": "Mölle",
       "Email": "info@kullabergsguiderna.se",
       "Phone": "+4673-988-1077",
       "Website": "http://kullabergsguiderna.se/"
     },
-    "Strandgården i Mölle": {
+    {
       "Name": "Strandgården i Mölle",
       "Category": "Stay",
-      "DescriptionEn": "Strandgården Bed & Breakfast offers accommodation with a magnificent view. Strandgården B&B has 10 rooms, most with the sea view. There is also a larger apartment available.",
-      "DescriptionSv": "På Strandgården Bed & Breakfast erbjuds du boende med en storslagen utsikt. Strandgården B&B har 10 trevliga ljusa rum, de flesta med utsikt över havet. Det finns även en större lägenhet att tillgå.",
-      "StorefrontPhoto": "https://drive.google.com/open?id=1QMY4d_Kq0KhFn8uX6vDvtPHxgMZr7Kpx",
-      "MapURL": "https://www.google.se/maps/place/Norra+Strandv%C3%A4gen+52,+263+77+M%C3%B6lle/@56.2855049,12.489511,17z/data=!3m1!4b1!4m5!3m4!1s0x465220a8d9b1e3d1:0xd10194b7d958fb3!8m2!3d56.2855049!4d12.4916997",
+      "DescriptionEn":
+        "Strandgården Bed & Breakfast offers accommodation with a magnificent view. Strandgården B&B has 10 rooms, most with the sea view. There is also a larger apartment available.",
+      "DescriptionSv":
+        "På Strandgården Bed & Breakfast erbjuds du boende med en storslagen utsikt. Strandgården B&B har 10 trevliga ljusa rum, de flesta med utsikt över havet. Det finns även en större lägenhet att tillgå.",
+      "StorefrontPhoto":
+        "https://drive.google.com/open?id=1QMY4d_Kq0KhFn8uX6vDvtPHxgMZr7Kpx",
+      "MapURL":
+        "https://www.google.se/maps/place/Norra+Strandv%C3%A4gen+52,+263+77+M%C3%B6lle/@56.2855049,12.489511,17z/data=!3m1!4b1!4m5!3m4!1s0x465220a8d9b1e3d1:0xd10194b7d958fb3!8m2!3d56.2855049!4d12.4916997",
       "Timestamp": "2018-02-28T14:55:42.670Z",
       "Komun": "Mölle",
       "Email": "tina@paulssonsgard.se",
       "Phone": "+46 42 347 016",
       "Website": "http://www.strandgardenmolle.se/"
     }
-  }
+  ]
 }
