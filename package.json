@@ -27,9 +27,9 @@
   "author": "Carlos Velasco",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
-    "url": "https://github.com/xtreemze/kullabergdirectory/issues"
+    "url": "https://github.com/kullaberg/kullabergdirectory/issues"
   },
-  "homepage": "https://github.com/xtreemze/kullabergdirectory#readme",
+  "homepage": "https://github.com/kullaberg/kullabergdirectory#readme",
   "dependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^6.4.1",
