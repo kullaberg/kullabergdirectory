@@ -42,3 +42,19 @@ nav .brand-logo {
 .card-title {
   text-shadow: rgba(0, 0, 0, 0.76) 0px 2px 2px;
 }
+
+#europeiska-jordbruksfonden.modal {
+    max-width: 50%;
+}
+
+@media only screen and (min-width: 992px) {
+    #europeiska-jordbruksfonden.modal {
+        max-width: 40%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #europeiska-jordbruksfonden.modal {
+        max-width: 30%;
+    }
+}

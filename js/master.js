@@ -37,11 +37,6 @@ class Business {
     this.descriptionEn = DescriptionEn || "Not Available";
     this.descriptionSv = DescriptionSv || "Not Available";
     this.photo = StorefrontPhoto || "Not Available";
-    let StorefrontPhotoCut = StorefrontPhoto.replace(
-      "https://drive.google.com/open?id=",
-      ""
-    );
-    this.photoCut = StorefrontPhotoCut;
     this.location = MapURL || "Not Available";
     this.komun = Komun || "Not Available";
     this.email = Email || "Not Available";
@@ -56,9 +51,7 @@ class Business {
     return `<li class="col s12 m6 l4">
     <div class="card medium blue darken-3">
     <div class="card-image">
-      <img class="" data-caption="${this.name}: ${this
-      .descriptionEn}" src="https://drive.google.com/uc?export=download&id=${this
-      .photoCut}">
+      <img class="" data-caption="${this.name}: ${this.descriptionEn}" src="${this.photo}">
     <span class="card-title">${this.name}</span>
   </div>
     <div class="card-content grey-text text-lighten-4">
@@ -96,6 +89,7 @@ window.addEventListener("load", function() {
   $(".scrollspy").scrollSpy();
   $(".tooltipped").tooltip();
   // $(".materialboxed").materialbox();
+  $('.modal').modal();
 });
 
 window.sort = function(category) {
