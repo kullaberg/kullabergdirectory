@@ -17,6 +17,8 @@ var __wpo = {
       "./fonts/roboto/Roboto-Medium.woff",
       "./fonts/roboto/Roboto-Bold.woff2",
       "./fonts/roboto/Roboto-Bold.woff",
+      "./img/lansstyrelsen.svg",
+      "./img/europeiska_jordbruksfonden.svg",
       "./img/asterisk.svg",
       "./bundle.js",
       "./js/materialize.min.js",
@@ -30,7 +32,7 @@ var __wpo = {
     "./js/jquery-3.2.1.min.js"
   ],
   "hashesMap": {
-    "82e2ba413abe58d782643ff5fd77f2e215e5d4d3": "./",
+    "f782a528a532b582af0c3a53343e2d88de81becf": "./",
     "02acf9a6077c6fd0ba37b5f16499365bf05eb7c9": "./fonts/materialdesignicons-webfont.eot",
     "ae356d6811285df99e5efa432a27a1ae2efb19b5": "./fonts/materialdesignicons-webfont.woff2",
     "5b560e4a95f2e1efea1b4d2b39d9d545b012ca22": "./fonts/materialdesignicons-webfont.woff",
@@ -46,12 +48,14 @@ var __wpo = {
     "b17bd60107c9ec0fd8c58a9e1fd222da7f1b99f4": "./fonts/roboto/Roboto-Medium.woff",
     "5a8465896222227807ff29908d8648db510561a5": "./fonts/roboto/Roboto-Bold.woff2",
     "e0655b6097eddf9df88cd194eff08436ea086a1c": "./fonts/roboto/Roboto-Bold.woff",
+    "198f591c1f8640cde2abf40fe49d445650089498": "./img/lansstyrelsen.svg",
+    "44a4b4fb33b564ef5eb610348aea83a13ab6aade": "./img/europeiska_jordbruksfonden.svg",
     "805db6e929e98fd3deb05cdb2935fc5a33183c15": "./img/asterisk.svg",
-    "263912ef315fe2cb77701731ab9bd3437aa0e460": "./bundle.js"
+    "c57de6e150977b5bc854823c5803d6a77bede34d": "./bundle.js"
   },
   "strategy": "all",
   "responseStrategy": "network-first",
-  "version": "2018-3-1 10:21:49",
+  "version": "2018-3-17 18:16:58",
   "name": "webpack-offline",
   "pluginVersion": "4.8.4",
   "relativePaths": true

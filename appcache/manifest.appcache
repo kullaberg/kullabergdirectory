@@ -1,5 +1,5 @@
 CACHE MANIFEST
-#ver:2018-3-1 10:21:49
+#ver:2018-3-17 18:16:58
 #plugin:4.8.4
 
 CACHE:
@@ -19,6 +19,8 @@ CACHE:
 ../fonts/roboto/Roboto-Medium.woff
 ../fonts/roboto/Roboto-Bold.woff2
 ../fonts/roboto/Roboto-Bold.woff
+../img/lansstyrelsen.svg
+../img/europeiska_jordbruksfonden.svg
 ../img/asterisk.svg
 ../bundle.js
 ../js/materialize.min.js
